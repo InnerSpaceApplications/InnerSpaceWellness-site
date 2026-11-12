@@ -61,6 +61,11 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .google-play { overflow: hidden; height: 56px; }
 .google-play img { height: 83px; margin: -13.5px -13.5px; }
 .coming-soon .store-badges { justify-content: center; }
+.store-badge.fallback {
+  display: inline-flex; align-items: center; height: 56px; padding: 0 20px; line-height: 1;
+  background: #000; color: #fff; border: 1px solid #a6a6a6; border-radius: 10px;
+  font: 600 16px var(--sans); text-decoration: none; overflow: visible;
+}
 
 /* Header / nav */
 .site-header {
@@ -143,7 +148,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   min-height: 317px; padding: 70px 24px; text-align: center;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px;
 }
-.coming-soon h2 { text-transform: uppercase; text-wrap: balance; }
+.coming-soon h2 { text-wrap: balance; }
 
 /* Section 5 — why different */
 .why { background: linear-gradient(102deg, #f8f2eb, #f3e0d4); padding: 100px 0; text-align: center; }
@@ -295,6 +300,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   .footer-cta .store-badges { margin-top: 24px; }
   .store-badges { gap: 12px; }
   .app-store img, .google-play { height: 48px; }
+  .store-badge.fallback { height: 48px; padding: 0 14px; font-size: 14px; }
   .google-play img { height: 71px; margin: -11.5px -11.5px; }
   .copyright { font-size: 16px; padding: 12px 34px 16px; }
 
