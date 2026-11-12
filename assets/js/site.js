@@ -28,13 +28,6 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Tap an orb to spin it (touch devices have no hover)
-  document.querySelectorAll('.domain .orb').forEach(function (orb) {
-    orb.addEventListener('click', function () {
-      orb.classList.remove('spin'); void orb.offsetWidth; orb.classList.add('spin');
-      setTimeout(function () { orb.classList.remove('spin'); }, 1300);
-    });
-  });
 
   // Explainer video: custom play overlay, as in the original embed
   var video = document.getElementById('is-player');

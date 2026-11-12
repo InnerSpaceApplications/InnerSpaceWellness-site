@@ -51,6 +51,17 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 }
 .btn:hover, .btn:focus-visible { background: var(--coral); }
 
+/* App Store / Google Play badges (official artwork, loaded from Apple and Google) */
+.store-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.store-badge { display: block; line-height: 0; border-radius: 10px; transition: opacity .15s ease, transform .15s ease; }
+.store-badge:hover, .store-badge:focus-visible { opacity: .85; transform: translateY(-2px); }
+.store-badge img { width: auto; max-width: none; }
+.app-store img { height: 56px; }
+/* Google's PNG has built-in padding; the negative margin trims it so both badges look the same height */
+.google-play { overflow: hidden; height: 56px; }
+.google-play img { height: 83px; margin: -13.5px -13.5px; }
+.coming-soon .store-badges { justify-content: center; }
+
 /* Header / nav */
 .site-header {
   position: absolute; top: 0; left: 0; right: 0; z-index: 20;
@@ -100,7 +111,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .intro-text { margin-top: 56px; max-width: 892px; }
 .intro-text .text-lg { margin-top: 32px; }
 .intro-text .text { margin-top: 32px; max-width: 868px; }
-.intro-text .btn { margin-top: 40px; }
+.intro-text .store-badges { margin-top: 40px; }
 
 /* Section 3 — six domains */
 .domains { position: relative; overflow: hidden; background: var(--cream); padding: 100px 0; }
@@ -112,11 +123,17 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .domains-intro .text-lg { margin-top: 24px; max-width: 760px; }
 .domain-grid { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 24px; row-gap: 32px; margin-top: 120px; }
 .domain .orb {
-  width: 220px; height: 220px; position: relative; cursor: pointer;
-  transition: transform 1.2s cubic-bezier(.215, .61, .355, 1);
+  width: 220px; height: 220px; position: relative;
+  animation: spin var(--orb-speed, 48s) linear infinite;
 }
+/* Each orb turns at its own pace so they never look synchronized */
+.domain:nth-child(1) .orb { --orb-speed: 44s; }
+.domain:nth-child(2) .orb { --orb-speed: 57s; animation-delay: -9s; }
+.domain:nth-child(3) .orb { --orb-speed: 39s; animation-delay: -21s; }
+.domain:nth-child(4) .orb { --orb-speed: 63s; animation-delay: -5s; }
+.domain:nth-child(5) .orb { --orb-speed: 50s; animation-delay: -30s; }
+.domain:nth-child(6) .orb { --orb-speed: 69s; animation-delay: -14s; }
 .domain .orb img { position: absolute; width: 340px; height: 340px; max-width: none; left: -60px; top: -60px; }
-.domain .orb:hover, .domain .orb.spin { transform: rotate(360deg); }
 .domain h3 { margin-top: 32px; }
 .domain p { margin-top: 12px; }
 
@@ -151,7 +168,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .footer-cta .illustration { width: 658px; height: 645px; flex: none; object-fit: cover; }
 .footer-cta .cta-text { padding-right: var(--gutter); }
 .footer-cta .h3 { margin-top: 40px; }
-.footer-cta .btn { margin-top: 40px; }
+.footer-cta .store-badges { margin-top: 40px; }
 .copyright { margin-top: -52px; position: relative; padding: 12px var(--gutter); text-align: center; font-size: 20px; line-height: 1.4; }
 .copyright a { text-decoration: underline; }
 .copyright a:hover { opacity: .6; }
@@ -219,7 +236,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   .footer-cta { flex-direction: column; align-items: stretch; gap: 40px; padding: 56px var(--gutter) 0; }
   .footer-cta .cta-text { padding-right: 0; order: -1; }
   .footer-cta .h3 { margin-top: 32px; }
-  .footer-cta .btn { margin-top: 32px; }
+  .footer-cta .store-badges { margin-top: 32px; }
   .footer-cta .illustration { width: 100%; height: auto; aspect-ratio: 720 / 705; }
   .copyright { margin-top: 40px; padding: 12px var(--gutter) 16px; }
   .subscribe-text { padding: 56px 40px; }
@@ -275,7 +292,10 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 
   .footer-cta { padding-top: 48px; }
   .footer-cta .h3 { font-size: 24px; margin-top: 24px; }
-  .footer-cta .btn { margin-top: 24px; }
+  .footer-cta .store-badges { margin-top: 24px; }
+  .store-badges { gap: 12px; }
+  .app-store img, .google-play { height: 48px; }
+  .google-play img { height: 71px; margin: -11.5px -11.5px; }
   .copyright { font-size: 16px; padding: 12px 34px 16px; }
 
   .legal { padding: 48px 0; }
@@ -293,5 +313,5 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   html { scroll-behavior: auto; }
   .hero .orbit { animation: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
-  .domain .orb { transition: none; }
+  .domain .orb { animation: none; }
 }
