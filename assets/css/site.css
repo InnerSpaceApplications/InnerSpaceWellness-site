@@ -226,6 +226,20 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .library-item .text { margin-top: 10px; font-size: 18px; max-width: 540px; }
 .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 
+/* ---------- About page ---------- */
+.about-page { background: var(--cream); }
+.about .eyebrow { font-size: 20px; text-transform: uppercase; }
+.about .library-section { margin-top: 24px; }
+.app-link {
+  display: inline-flex; flex-direction: column; gap: 4px; margin-top: 32px;
+  padding: 24px 28px; min-width: 320px; border-radius: 16px; text-decoration: none;
+  background: #fff; box-shadow: 0 10px 30px rgba(60, 50, 90, .10);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.app-link:hover, .app-link:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(60, 50, 90, .16); }
+.app-link-name { font-family: var(--serif); font-size: 28px; line-height: 1.25; }
+.app-link-url { font-size: 18px; opacity: .7; }
+
 /* ---------- Subscribe page ---------- */
 .subscribe { display: flex; min-height: 100vh; background: linear-gradient(180deg, #a6a3d8, #969cd2); }
 .subscribe-text { flex: 1 1 0; padding: 56px 100px 56px 100px; display: flex; flex-direction: column; gap: 40px; max-width: 830px; }
@@ -274,6 +288,20 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   .subscribe-text { padding: 56px 40px; }
   .library { padding: 48px 0 80px; }
   .library-grid { grid-template-columns: minmax(0, 540px) minmax(0, 260px); gap: 40px 32px; }
+}
+
+/* ---------- Hamburger menu below 768px (six tabs no longer fit) ---------- */
+@media (max-width: 767px) {
+  .site-header .nav { display: none; }
+  .menu-toggle { display: block; }
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 50; background: var(--lavender);
+    padding: 40px 24px; flex-direction: column; align-items: center; gap: 100px;
+  }
+  .mobile-menu.open { display: flex; }
+  .menu-close { display: block; }
+  .mobile-menu .nav { flex-direction: column; align-items: center; gap: 32px; }
+  .mobile-menu .nav a { font-size: 32px; }
 }
 
 /* ---------- Mobile ---------- */
@@ -341,7 +369,8 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   .legal h3, .legal p, .legal li, .legal .eyebrow { font-size: 16px; }
 
   .subscribe { flex-direction: column; }
-  .library-intro .eyebrow { font-size: 16px; }
+  .library-intro .eyebrow, .about .eyebrow { font-size: 16px; }
+  .app-link { display: flex; min-width: 0; }
   .library-section { margin-top: 40px; }
   .library-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 24px; }
   .library-title { font-size: 22px; }
