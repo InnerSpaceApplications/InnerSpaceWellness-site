@@ -209,14 +209,14 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 
 /* ---------- Library page ---------- */
 .library { padding: 72px 0 120px; }
-.library-intro { max-width: 760px; }
+.library-intro { max-width: none; }
 .library-intro .eyebrow { font-size: 20px; text-transform: uppercase; }
 .library-intro h1 { margin-top: 16px; }
-.library-intro .text-lg { margin-top: 16px; }
 .library-section { margin-top: 64px; }
 .library-section-title { padding-bottom: 16px; border-bottom: 1px solid rgba(11, 11, 11, .15); }
+.library-section-desc { margin-top: 16px; max-width: 640px; }
 /* Both videos share one height (~368px) so they sit side by side as a set */
-.library-grid { display: grid; grid-template-columns: 540px 300px; gap: 48px 48px; align-items: start; margin-top: 32px; }
+.library-grid { display: grid; grid-template-columns: 540px 300px; gap: 48px 48px; align-items: start; margin-top: 40px; }
 .library-media { border-radius: 16px; overflow: hidden; background: #eeeeee; box-shadow: 0 10px 30px rgba(60, 50, 90, .12); }
 .library-media video { display: block; width: 100%; height: auto; background: #eeeeee; }
 .library-item.portrait .library-media { width: 207px; border-radius: 14px; }
