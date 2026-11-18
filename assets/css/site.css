@@ -207,6 +207,22 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .legal a { text-decoration: underline; word-break: break-word; }
 .legal ul { padding-left: 1.2em; }
 
+/* ---------- Library page ---------- */
+.library-page { background: var(--cream); }
+.library { padding: 72px 0 120px; }
+.library-intro { max-width: 760px; }
+.library-intro .eyebrow { font-size: 20px; text-transform: uppercase; }
+.library-intro h1 { margin-top: 16px; }
+.library-intro .text-lg { margin-top: 16px; }
+.library-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 56px 40px; align-items: start; margin-top: 64px; }
+.library-media { border-radius: 16px; overflow: hidden; background: #eeeeee; box-shadow: 0 10px 30px rgba(60, 50, 90, .12); }
+.library-media video { display: block; width: 100%; height: auto; background: #eeeeee; }
+.library-item.portrait .library-media { max-width: 360px; }
+.library-meta { margin-top: 20px; font: 600 14px/1.4 var(--sans); text-transform: uppercase; letter-spacing: .06em; opacity: .65; }
+.library-item h2 { margin-top: 8px; }
+.library-item .text { margin-top: 12px; max-width: 640px; }
+.nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+
 /* ---------- Subscribe page ---------- */
 .subscribe { display: flex; min-height: 100vh; background: linear-gradient(180deg, #a6a3d8, #969cd2); }
 .subscribe-text { flex: 1 1 0; padding: 56px 100px 56px 100px; display: flex; flex-direction: column; gap: 40px; max-width: 830px; }
@@ -253,6 +269,9 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   .footer-cta .illustration { width: 100%; height: auto; aspect-ratio: 720 / 705; }
   .copyright { margin-top: 40px; padding: 12px var(--gutter) 16px; }
   .subscribe-text { padding: 56px 40px; }
+  .library { padding: 48px 0 80px; }
+  .library-grid { grid-template-columns: 1fr; }
+  .library-item.portrait .library-media { max-width: 400px; }
 }
 
 /* ---------- Mobile ---------- */
@@ -320,6 +339,10 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   .legal h3, .legal p, .legal li, .legal .eyebrow { font-size: 16px; }
 
   .subscribe { flex-direction: column; }
+  .library-intro .eyebrow { font-size: 16px; }
+  .library-grid { margin-top: 40px; gap: 48px; }
+  .library-item .h3 { font-size: 24px; }
+  .library-item.portrait .library-media { max-width: 300px; margin: 0 auto; }
   .subscribe-art { display: none; }
   .subscribe-text { padding: 40px 24px; }
   .subscribe-text .text-lg { font-family: var(--serif); font-size: 24px; }
