@@ -44,6 +44,10 @@ Don't touch any **MX** or **TXT** records, so your `info@innerspacewellness.app`
 - **Legal pages:** each section is a plain `<h2>`, `<h3>` or `<p>`, so you can paste in new wording directly.
 - **Video:** the explainer video and its poster image are still loaded from your existing Firebase Storage and GitHub links (`index.html`, search for `is-player`).
 
+## Styles and caching
+
+Every page links to `site.css` and `site.js` with a version suffix, such as `?v=20261118b`. After changing either file, update that suffix on every page so visitors' browsers load the new version right away.
+
 ## Fonts
 
 Song Myung and Fixel are both open-source (SIL Open Font License); the licenses are in `assets/fonts/`.
