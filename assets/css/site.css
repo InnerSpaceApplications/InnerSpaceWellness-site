@@ -95,6 +95,13 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .hero-text { position: relative; padding-top: 250px; padding-bottom: 150px; }
 .hero h1 { max-width: 659px; }
 .hero .lead { max-width: 730px; margin-top: 32px; }
+.renovation-note { max-width: 600px; margin-top: 40px; }
+.renovation-note .pill {
+  display: inline-block; padding: 8px 16px; border-radius: 999px;
+  background: rgba(255,255,255,.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  font: 600 16px/1.4 var(--sans); text-transform: uppercase; letter-spacing: .04em;
+}
+.renovation-note p { margin-top: 16px; }
 
 /* Section 2 — intro + video */
 .intro { background: var(--sand); padding: 100px 0; }
@@ -116,7 +123,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .intro-text { margin-top: 56px; max-width: 892px; }
 .intro-text .text-lg { margin-top: 32px; }
 .intro-text .text { margin-top: 32px; max-width: 868px; }
-.intro-text .store-badges { margin-top: 40px; }
+.intro-text .store-badges, .intro-text .btn { margin-top: 40px; }
 
 /* Section 3 — six domains */
 .domains { position: relative; overflow: hidden; background: var(--cream); padding: 100px 0; }
@@ -149,6 +156,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px;
 }
 .coming-soon h2 { text-wrap: balance; }
+.coming-soon .soon-sub { max-width: 640px; margin-top: -16px; text-wrap: balance; }
 
 /* Section 5 — why different */
 .why { background: linear-gradient(102deg, #f8f2eb, #f3e0d4); padding: 100px 0; text-align: center; }
@@ -173,7 +181,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .footer-cta .illustration { width: 658px; height: 645px; flex: none; object-fit: cover; }
 .footer-cta .cta-text { padding-right: var(--gutter); }
 .footer-cta .h3 { margin-top: 40px; }
-.footer-cta .store-badges { margin-top: 40px; }
+.footer-cta .store-badges, .footer-cta .btn { margin-top: 40px; }
 .copyright { margin-top: -52px; position: relative; padding: 12px var(--gutter); text-align: center; font-size: 20px; line-height: 1.4; }
 .copyright a { text-decoration: underline; }
 .copyright a:hover { opacity: .6; }
@@ -241,7 +249,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   .footer-cta { flex-direction: column; align-items: stretch; gap: 40px; padding: 56px var(--gutter) 0; }
   .footer-cta .cta-text { padding-right: 0; order: -1; }
   .footer-cta .h3 { margin-top: 32px; }
-  .footer-cta .store-badges { margin-top: 32px; }
+  .footer-cta .store-badges, .footer-cta .btn { margin-top: 32px; }
   .footer-cta .illustration { width: 100%; height: auto; aspect-ratio: 720 / 705; }
   .copyright { margin-top: 40px; padding: 12px var(--gutter) 16px; }
   .subscribe-text { padding: 56px 40px; }
@@ -273,6 +281,8 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   .hero .orbit { width: 682px; height: 682px; right: -331px; top: 28px; }
   .hero-text { padding-top: 200px; padding-bottom: 100px; }
   .hero .lead { margin-top: 40px; }
+  .renovation-note { margin-top: 32px; }
+  .renovation-note .pill { font-size: 13px; }
   .intro { padding: 48px 0; }
   .intro-text { margin-top: 20px; }
   .intro-text .text-lg, .intro-text .text { margin-top: 24px; }
@@ -297,7 +307,7 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 
   .footer-cta { padding-top: 48px; }
   .footer-cta .h3 { font-size: 24px; margin-top: 24px; }
-  .footer-cta .store-badges { margin-top: 24px; }
+  .footer-cta .store-badges, .footer-cta .btn { margin-top: 24px; }
   .store-badges { gap: 12px; }
   .app-store img, .google-play { height: 48px; }
   .store-badge.fallback { height: 48px; padding: 0 14px; font-size: 14px; }
