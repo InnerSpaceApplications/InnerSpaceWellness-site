@@ -208,7 +208,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .legal ul { padding-left: 1.2em; }
 
 /* ---------- Library page ---------- */
-.library-page { background: var(--cream); }
 .library { padding: 72px 0 120px; }
 .library-intro { max-width: 760px; }
 .library-intro .eyebrow { font-size: 20px; text-transform: uppercase; }
@@ -227,18 +226,31 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 
 /* ---------- About page ---------- */
-.about-page { background: var(--cream); }
+/* Library + About: soft wash of the six domain colors */
+.library-page, .about-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(55% 45% at 0% 0%, rgba(254, 214, 68, .55), transparent 70%),
+    radial-gradient(50% 40% at 100% 8%, rgba(130, 156, 212, .50), transparent 70%),
+    radial-gradient(55% 45% at 100% 100%, rgba(133, 200, 163, .55), transparent 70%),
+    radial-gradient(50% 45% at 0% 100%, rgba(251, 142, 109, .45), transparent 70%),
+    radial-gradient(65% 55% at 50% 55%, rgba(165, 162, 214, .40), transparent 75%),
+    var(--cream);
+}
 .about .eyebrow { font-size: 20px; text-transform: uppercase; }
 .about .library-section { margin-top: 24px; }
 .app-link {
-  display: inline-flex; flex-direction: column; gap: 4px; margin-top: 32px;
-  padding: 24px 28px; min-width: 320px; border-radius: 16px; text-decoration: none;
-  background: #fff; box-shadow: 0 10px 30px rgba(60, 50, 90, .10);
+  display: flex; align-items: center; gap: 24px; margin-top: 32px; max-width: 640px;
+  padding: 24px; border-radius: 20px; text-decoration: none;
+  background: rgba(255, 255, 255, .85); box-shadow: 0 10px 30px rgba(60, 50, 90, .10);
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .app-link:hover, .app-link:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(60, 50, 90, .16); }
+.app-link-icon { width: 96px; height: 96px; flex: none; border-radius: 22px; }
+.app-link-body { display: flex; flex-direction: column; gap: 6px; }
 .app-link-name { font-family: var(--serif); font-size: 28px; line-height: 1.25; }
-.app-link-url { font-size: 18px; opacity: .7; }
+.app-link-desc { font-size: 18px; line-height: 1.4; }
+.app-link-url { font-size: 16px; opacity: .65; }
 
 /* ---------- Subscribe page ---------- */
 .subscribe { display: flex; min-height: 100vh; background: linear-gradient(180deg, #a6a3d8, #969cd2); }
@@ -370,7 +382,10 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 
   .subscribe { flex-direction: column; }
   .library-intro .eyebrow, .about .eyebrow { font-size: 16px; }
-  .app-link { display: flex; min-width: 0; }
+  .app-link { flex-direction: column; align-items: flex-start; gap: 16px; padding: 20px; }
+  .app-link-icon { width: 72px; height: 72px; border-radius: 16px; }
+  .app-link-name { font-size: 24px; }
+  .app-link-desc { font-size: 16px; }
   .library-section { margin-top: 40px; }
   .library-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 24px; }
   .library-title { font-size: 22px; }
