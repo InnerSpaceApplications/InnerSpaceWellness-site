@@ -46,7 +46,7 @@ Don't touch any **MX** or **TXT** records, so your `info@innerspacewellness.app`
 
 ## Styles and caching
 
-Every page links to `site.css` and `site.js` with a version suffix, such as `?v=20261118c`. After changing either file, update that suffix on every page so visitors' browsers load the new version right away.
+Every page links to `site.css` and `site.js` with a version suffix, such as `?v=20261121a`. After changing either file, update that suffix on every page so visitors' browsers load the new version right away.
 
 ## Fonts
 

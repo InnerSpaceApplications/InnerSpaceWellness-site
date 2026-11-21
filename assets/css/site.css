@@ -226,9 +226,8 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 
 /* ---------- About page ---------- */
-/* Library: green family · About: purple family (domain colors fading to off-white) */
-.library-page { min-height: 100vh; background: linear-gradient(180deg, #69af88 0%, #85c8a3 30%, #fbfbf1 80%); }
-.about-page { min-height: 100vh; background: linear-gradient(180deg, #938fd6 0%, #a5a2d6 35%, #fbfbf1 90%); }
+/* Library + About: purple family (domain colors fading to off-white) */
+.library-page, .about-page { min-height: 100vh; background: linear-gradient(180deg, #938fd6 0%, #a5a2d6 35%, #fbfbf1 90%); }
 .about .eyebrow { font-size: 20px; text-transform: uppercase; }
 .about .library-section { margin-top: 24px; }
 .app-link {
